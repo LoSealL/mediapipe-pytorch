@@ -1,0 +1,51 @@
+# Temp work dir
+seafile-ignore.txt
+.vscode/
+.VSCodeCounter/
+.pytest_cache/
+__pycache__/
+.idea/
+subway/**/subway.h
+!subway/subway.h
+data/_output
+data/dataset
+
+# Install info.
+*.egg-info/
+*.pyx
+*.pyd
+**/csrc/*.pyd
+**/csrc/*.so
+**/csrc/*.dll
+dist/
+\.eggs/
+
+# Intermediate output files
+build
+_build
+autogen
+**/docs/api
+**/docs/autodoxygen
+*.tmh
+
+# visualize
+[\._]viz
+
+# external update
+/external/*
+!/external/clim
+!/external/vpl
+!/external/wdk
+!/external/*.zip
+
+# Images
+.png
+.jpg
+.jpeg
+.bmp
+.yuv
+.rgb
+.nv12
+.pyc
+.y
+.yuv420p

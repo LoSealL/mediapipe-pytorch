@@ -1,0 +1,400 @@
+[000] conv2d/Kernel [32  5  5  3]
+[001] conv2d/Bias [32]
+[002] p_re_lu/Alpha [ 1  1 32]
+[003] depthwise_conv2d/Kernel [ 1  5  5 32]
+[004] depthwise_conv2d/Bias [32]
+[005] conv2d_1/Kernel [32  1  1 32]
+[006] conv2d_1/Bias [32]
+[007] p_re_lu_1/Alpha [ 1  1 32]
+[008] depthwise_conv2d_1/Kernel [ 1  5  5 32]
+[009] depthwise_conv2d_1/Bias [32]
+[010] conv2d_2/Kernel [32  1  1 32]
+[011] conv2d_2/Bias [32]
+[012] p_re_lu_2/Alpha [ 1  1 32]
+[013] depthwise_conv2d_2/Kernel [ 1  5  5 32]
+[014] depthwise_conv2d_2/Bias [32]
+[015] conv2d_3/Kernel [32  1  1 32]
+[016] conv2d_3/Bias [32]
+[017] p_re_lu_3/Alpha [ 1  1 32]
+[018] depthwise_conv2d_3/Kernel [ 1  5  5 32]
+[019] depthwise_conv2d_3/Bias [32]
+[020] conv2d_4/Kernel [64  1  1 32]
+[021] conv2d_4/Bias [64]
+[022] p_re_lu_4/Alpha [ 1  1 64]
+[023] depthwise_conv2d_4/Kernel [ 1  5  5 64]
+[024] depthwise_conv2d_4/Bias [64]
+[025] conv2d_5/Kernel [64  1  1 64]
+[026] conv2d_5/Bias [64]
+[027] p_re_lu_5/Alpha [ 1  1 64]
+[028] depthwise_conv2d_5/Kernel [ 1  5  5 64]
+[029] depthwise_conv2d_5/Bias [64]
+[030] conv2d_6/Kernel [64  1  1 64]
+[031] conv2d_6/Bias [64]
+[032] p_re_lu_6/Alpha [ 1  1 64]
+[033] depthwise_conv2d_6/Kernel [ 1  5  5 64]
+[034] depthwise_conv2d_6/Bias [64]
+[035] conv2d_7/Kernel [64  1  1 64]
+[036] conv2d_7/Bias [64]
+[037] p_re_lu_7/Alpha [ 1  1 64]
+[038] depthwise_conv2d_7/Kernel [ 1  5  5 64]
+[039] depthwise_conv2d_7/Bias [64]
+[040] conv2d_8/Kernel [128   1   1  64]
+[041] conv2d_8/Bias [128]
+[042] p_re_lu_8/Alpha [  1   1 128]
+[043] depthwise_conv2d_8/Kernel [  1   5   5 128]
+[044] depthwise_conv2d_8/Bias [128]
+[045] conv2d_9/Kernel [128   1   1 128]
+[046] conv2d_9/Bias [128]
+[047] p_re_lu_9/Alpha [  1   1 128]
+[048] depthwise_conv2d_9/Kernel [  1   5   5 128]
+[049] depthwise_conv2d_9/Bias [128]
+[050] conv2d_10/Kernel [128   1   1 128]
+[051] conv2d_10/Bias [128]
+[052] p_re_lu_10/Alpha [  1   1 128]
+[053] depthwise_conv2d_10/Kernel [  1   5   5 128]
+[054] depthwise_conv2d_10/Bias [128]
+[055] conv2d_11/Kernel [128   1   1 128]
+[056] conv2d_11/Bias [128]
+[057] p_re_lu_11/Alpha [  1   1 128]
+[058] depthwise_conv2d_11/Kernel [  1   5   5 128]
+[059] depthwise_conv2d_11/Bias [128]
+[060] conv2d_12/Kernel [256   1   1 128]
+[061] conv2d_12/Bias [256]
+[062] p_re_lu_12/Alpha [  1   1 256]
+[063] depthwise_conv2d_12/Kernel [  1   5   5 256]
+[064] depthwise_conv2d_12/Bias [256]
+[065] conv2d_13/Kernel [256   1   1 256]
+[066] conv2d_13/Bias [256]
+[067] p_re_lu_13/Alpha [  1   1 256]
+[068] depthwise_conv2d_13/Kernel [  1   5   5 256]
+[069] depthwise_conv2d_13/Bias [256]
+[070] conv2d_14/Kernel [256   1   1 256]
+[071] conv2d_14/Bias [256]
+[072] p_re_lu_14/Alpha [  1   1 256]
+[073] depthwise_conv2d_14/Kernel [  1   5   5 256]
+[074] depthwise_conv2d_14/Bias [256]
+[075] conv2d_15/Kernel [256   1   1 256]
+[076] conv2d_15/Bias [256]
+[077] p_re_lu_15/Alpha [  1   1 256]
+[078] depthwise_conv2d_15/Kernel [  1   5   5 256]
+[079] depthwise_conv2d_15/Bias [256]
+[080] conv2d_16/Kernel [256   1   1 256]
+[081] conv2d_16/Bias [256]
+[082] p_re_lu_16/Alpha [  1   1 256]
+[083] depthwise_conv2d_16/Kernel [  1   5   5 256]
+[084] depthwise_conv2d_16/Bias [256]
+[085] conv2d_17/Kernel [256   1   1 256]
+[086] conv2d_17/Bias [256]
+[087] p_re_lu_17/Alpha [  1   1 256]
+[088] depthwise_conv2d_17/Kernel [  1   5   5 256]
+[089] depthwise_conv2d_17/Bias [256]
+[090] conv2d_18/Kernel [256   1   1 256]
+[091] conv2d_18/Bias [256]
+[092] p_re_lu_18/Alpha [  1   1 256]
+[093] depthwise_conv2d_18/Kernel [  1   5   5 256]
+[094] depthwise_conv2d_18/Bias [256]
+[095] conv2d_19/Kernel [256   1   1 256]
+[096] conv2d_19/Bias [256]
+[097] p_re_lu_19/Alpha [  1   1 256]
+[098] conv2d_20/Kernel [256   1   1 256]
+[099] conv2d_20/Bias [256]
+[100] p_re_lu_20/Alpha [  1   1 256]
+[101] depthwise_conv2d_19/Kernel [  1   5   5 256]
+[102] depthwise_conv2d_19/Bias [256]
+[103] conv2d_21/Kernel [256   1   1 256]
+[104] conv2d_21/Bias [256]
+[105] p_re_lu_21/Alpha [  1   1 256]
+[106] depthwise_conv2d_20/Kernel [  1   5   5 256]
+[107] depthwise_conv2d_20/Bias [256]
+[108] conv2d_22/Kernel [256   1   1 256]
+[109] conv2d_22/Bias [256]
+[110] p_re_lu_22/Alpha [  1   1 256]
+[111] conv2d_23/Kernel [128   1   1 256]
+[112] conv2d_23/Bias [128]
+[113] p_re_lu_23/Alpha [  1   1 128]
+[114] depthwise_conv2d_21/Kernel [  1   5   5 128]
+[115] depthwise_conv2d_21/Bias [128]
+[116] conv2d_24/Kernel [128   1   1 128]
+[117] conv2d_24/Bias [128]
+[118] p_re_lu_24/Alpha [  1   1 128]
+[119] depthwise_conv2d_22/Kernel [  1   5   5 128]
+[120] depthwise_conv2d_22/Bias [128]
+[121] conv2d_25/Kernel [128   1   1 128]
+[122] conv2d_25/Bias [128]
+[123] p_re_lu_25/Alpha [  1   1 128]
+[124] classificator_8/Kernel [  2   1   1 128]
+[125] classificator_8/Bias [2]
+[126] classificator_16/Kernel [  6   1   1 256]
+[127] classificator_16/Bias [6]
+[128] regressor_8/Kernel [ 36   1   1 128]
+[129] regressor_8/Bias [36]
+[130] regressor_16/Kernel [108   1   1 256]
+[131] regressor_16/Bias [108]
+
+[000] blazepalm.backbone1.backbone1.0.weight torch.Size([32, 3, 5, 5])
+[001] blazepalm.backbone1.backbone1.0.bias torch.Size([32])
+[002] blazepalm.backbone1.backbone1.1.weight torch.Size([32])
+[003] blazepalm.backbone1.backbone1.2.convs.0.weight torch.Size([32, 1, 5, 5])
+[004] blazepalm.backbone1.backbone1.2.convs.0.bias torch.Size([32])
+[005] blazepalm.backbone1.backbone1.2.convs.1.weight torch.Size([32, 32, 1, 1])
+[006] blazepalm.backbone1.backbone1.2.convs.1.bias torch.Size([32])
+[007] blazepalm.backbone1.backbone1.3.weight torch.Size([32])
+[008] blazepalm.backbone1.backbone1.4.convs.0.weight torch.Size([32, 1, 5, 5])
+[009] blazepalm.backbone1.backbone1.4.convs.0.bias torch.Size([32])
+[010] blazepalm.backbone1.backbone1.4.convs.1.weight torch.Size([32, 32, 1, 1])
+[011] blazepalm.backbone1.backbone1.4.convs.1.bias torch.Size([32])
+[012] blazepalm.backbone1.backbone1.5.weight torch.Size([32])
+[013] blazepalm.backbone1.backbone1.6.convs.0.weight torch.Size([32, 1, 5, 5])
+[014] blazepalm.backbone1.backbone1.6.convs.0.bias torch.Size([32])
+[015] blazepalm.backbone1.backbone1.6.convs.1.weight torch.Size([32, 32, 1, 1])
+[016] blazepalm.backbone1.backbone1.6.convs.1.bias torch.Size([32])
+[017] blazepalm.backbone1.backbone1.7.weight torch.Size([32])
+[018] blazepalm.backbone1.backbone1.8.convs.0.weight torch.Size([32, 1, 5, 5])
+[019] blazepalm.backbone1.backbone1.8.convs.0.bias torch.Size([32])
+[020] blazepalm.backbone1.backbone1.8.convs.1.weight torch.Size([64, 32, 1, 1])
+[021] blazepalm.backbone1.backbone1.8.convs.1.bias torch.Size([64])
+[022] blazepalm.backbone1.backbone1.9.weight torch.Size([64])
+[023] blazepalm.backbone1.backbone1.10.convs.0.weight torch.Size([64, 1, 5, 5])
+[024] blazepalm.backbone1.backbone1.10.convs.0.bias torch.Size([64])
+[025] blazepalm.backbone1.backbone1.10.convs.1.weight torch.Size([64, 64, 1, 1])
+[026] blazepalm.backbone1.backbone1.10.convs.1.bias torch.Size([64])
+[027] blazepalm.backbone1.backbone1.11.weight torch.Size([64])
+[028] blazepalm.backbone1.backbone1.12.convs.0.weight torch.Size([64, 1, 5, 5])
+[029] blazepalm.backbone1.backbone1.12.convs.0.bias torch.Size([64])
+[030] blazepalm.backbone1.backbone1.12.convs.1.weight torch.Size([64, 64, 1, 1])
+[031] blazepalm.backbone1.backbone1.12.convs.1.bias torch.Size([64])
+[032] blazepalm.backbone1.backbone1.13.weight torch.Size([64])
+[033] blazepalm.backbone1.backbone1.14.convs.0.weight torch.Size([64, 1, 5, 5])
+[034] blazepalm.backbone1.backbone1.14.convs.0.bias torch.Size([64])
+[035] blazepalm.backbone1.backbone1.14.convs.1.weight torch.Size([64, 64, 1, 1])
+[036] blazepalm.backbone1.backbone1.14.convs.1.bias torch.Size([64])
+[037] blazepalm.backbone1.backbone1.15.weight torch.Size([64])
+[038] blazepalm.backbone1.backbone1.16.convs.0.weight torch.Size([64, 1, 5, 5])
+[039] blazepalm.backbone1.backbone1.16.convs.0.bias torch.Size([64])
+[040] blazepalm.backbone1.backbone1.16.convs.1.weight torch.Size([128, 64, 1, 1])
+[041] blazepalm.backbone1.backbone1.16.convs.1.bias torch.Size([128])
+[042] blazepalm.backbone1.backbone1.17.weight torch.Size([128])
+[043] blazepalm.backbone1.backbone1.18.convs.0.weight torch.Size([128, 1, 5, 5])
+[044] blazepalm.backbone1.backbone1.18.convs.0.bias torch.Size([128])
+[045] blazepalm.backbone1.backbone1.18.convs.1.weight torch.Size([128, 128, 1, 1])
+[046] blazepalm.backbone1.backbone1.18.convs.1.bias torch.Size([128])
+[047] blazepalm.backbone1.backbone1.19.weight torch.Size([128])
+[048] blazepalm.backbone1.backbone1.20.convs.0.weight torch.Size([128, 1, 5, 5])
+[049] blazepalm.backbone1.backbone1.20.convs.0.bias torch.Size([128])
+[050] blazepalm.backbone1.backbone1.20.convs.1.weight torch.Size([128, 128, 1, 1])
+[051] blazepalm.backbone1.backbone1.20.convs.1.bias torch.Size([128])
+[052] blazepalm.backbone1.backbone1.21.weight torch.Size([128])
+[053] blazepalm.backbone1.backbone1.22.convs.0.weight torch.Size([128, 1, 5, 5])
+[054] blazepalm.backbone1.backbone1.22.convs.0.bias torch.Size([128])
+[055] blazepalm.backbone1.backbone1.22.convs.1.weight torch.Size([128, 128, 1, 1])
+[056] blazepalm.backbone1.backbone1.22.convs.1.bias torch.Size([128])
+[057] blazepalm.backbone1.backbone1.23.weight torch.Size([128])
+[058] blazepalm.backbone2.path1.0.convs.0.weight torch.Size([128, 1, 5, 5])
+[059] blazepalm.backbone2.path1.0.convs.0.bias torch.Size([128])
+[060] blazepalm.backbone2.path1.0.convs.1.weight torch.Size([256, 128, 1, 1])
+[061] blazepalm.backbone2.path1.0.convs.1.bias torch.Size([256])
+[062] blazepalm.backbone2.path1.1.weight torch.Size([256])
+[063] blazepalm.backbone2.path1.2.convs.0.weight torch.Size([256, 1, 5, 5])
+[064] blazepalm.backbone2.path1.2.convs.0.bias torch.Size([256])
+[065] blazepalm.backbone2.path1.2.convs.1.weight torch.Size([256, 256, 1, 1])
+[066] blazepalm.backbone2.path1.2.convs.1.bias torch.Size([256])
+[067] blazepalm.backbone2.path1.3.weight torch.Size([256])
+[068] blazepalm.backbone2.path1.4.convs.0.weight torch.Size([256, 1, 5, 5])
+[069] blazepalm.backbone2.path1.4.convs.0.bias torch.Size([256])
+[070] blazepalm.backbone2.path1.4.convs.1.weight torch.Size([256, 256, 1, 1])
+[071] blazepalm.backbone2.path1.4.convs.1.bias torch.Size([256])
+[072] blazepalm.backbone2.path1.5.weight torch.Size([256])
+[073] blazepalm.backbone2.path1.6.convs.0.weight torch.Size([256, 1, 5, 5])
+[074] blazepalm.backbone2.path1.6.convs.0.bias torch.Size([256])
+[075] blazepalm.backbone2.path1.6.convs.1.weight torch.Size([256, 256, 1, 1])
+[076] blazepalm.backbone2.path1.6.convs.1.bias torch.Size([256])
+[077] blazepalm.backbone2.path1.7.weight torch.Size([256])
+[078] blazepalm.backbone2.path2.0.convs.0.weight torch.Size([256, 1, 5, 5])
+[079] blazepalm.backbone2.path2.0.convs.0.bias torch.Size([256])
+[080] blazepalm.backbone2.path2.0.convs.1.weight torch.Size([256, 256, 1, 1])
+[081] blazepalm.backbone2.path2.0.convs.1.bias torch.Size([256])
+[082] blazepalm.backbone2.path2.1.weight torch.Size([256])
+[083] blazepalm.backbone2.path2.2.convs.0.weight torch.Size([256, 1, 5, 5])
+[084] blazepalm.backbone2.path2.2.convs.0.bias torch.Size([256])
+[085] blazepalm.backbone2.path2.2.convs.1.weight torch.Size([256, 256, 1, 1])
+[086] blazepalm.backbone2.path2.2.convs.1.bias torch.Size([256])
+[087] blazepalm.backbone2.path2.3.weight torch.Size([256])
+[088] blazepalm.backbone2.path2.4.convs.0.weight torch.Size([256, 1, 5, 5])
+[089] blazepalm.backbone2.path2.4.convs.0.bias torch.Size([256])
+[090] blazepalm.backbone2.path2.4.convs.1.weight torch.Size([256, 256, 1, 1])
+[091] blazepalm.backbone2.path2.4.convs.1.bias torch.Size([256])
+[092] blazepalm.backbone2.path2.5.weight torch.Size([256])
+[093] blazepalm.backbone2.path2.6.convs.0.weight torch.Size([256, 1, 5, 5])
+[094] blazepalm.backbone2.path2.6.convs.0.bias torch.Size([256])
+[095] blazepalm.backbone2.path2.6.convs.1.weight torch.Size([256, 256, 1, 1])
+[096] blazepalm.backbone2.path2.6.convs.1.bias torch.Size([256])
+[097] blazepalm.backbone2.path2.7.weight torch.Size([256])
+[098] blazepalm.backbone2.path2.9.weight torch.Size([256, 256, 1, 1])
+[099] blazepalm.backbone2.path2.9.bias torch.Size([256])
+[100] blazepalm.backbone2.path2.10.weight torch.Size([256])
+[101] blazepalm.backbone2.path3.0.convs.0.weight torch.Size([256, 1, 5, 5])
+[102] blazepalm.backbone2.path3.0.convs.0.bias torch.Size([256])
+[103] blazepalm.backbone2.path3.0.convs.1.weight torch.Size([256, 256, 1, 1])
+[104] blazepalm.backbone2.path3.0.convs.1.bias torch.Size([256])
+[105] blazepalm.backbone2.path3.1.weight torch.Size([256])
+[106] blazepalm.backbone2.path3.2.convs.0.weight torch.Size([256, 1, 5, 5])
+[107] blazepalm.backbone2.path3.2.convs.0.bias torch.Size([256])
+[108] blazepalm.backbone2.path3.2.convs.1.weight torch.Size([256, 256, 1, 1])
+[109] blazepalm.backbone2.path3.2.convs.1.bias torch.Size([256])
+[110] blazepalm.backbone2.path3.3.weight torch.Size([256])
+[111] blazepalm.backbone2.path4.1.weight torch.Size([128, 256, 1, 1])
+[112] blazepalm.backbone2.path4.1.bias torch.Size([128])
+[113] blazepalm.backbone2.path4.2.weight torch.Size([128])
+[114] blazepalm.backbone2.path5.0.convs.0.weight torch.Size([128, 1, 5, 5])
+[115] blazepalm.backbone2.path5.0.convs.0.bias torch.Size([128])
+[116] blazepalm.backbone2.path5.0.convs.1.weight torch.Size([128, 128, 1, 1])
+[117] blazepalm.backbone2.path5.0.convs.1.bias torch.Size([128])
+[118] blazepalm.backbone2.path5.1.weight torch.Size([128])
+[119] blazepalm.backbone2.path5.2.convs.0.weight torch.Size([128, 1, 5, 5])
+[120] blazepalm.backbone2.path5.2.convs.0.bias torch.Size([128])
+[121] blazepalm.backbone2.path5.2.convs.1.weight torch.Size([128, 128, 1, 1])
+[122] blazepalm.backbone2.path5.2.convs.1.bias torch.Size([128])
+[123] blazepalm.backbone2.path5.3.weight torch.Size([128])
+[124] blazepalm.classifier2.weight torch.Size([2, 128, 1, 1])
+[125] blazepalm.classifier2.bias torch.Size([2])
+[126] blazepalm.classifier1.weight torch.Size([6, 256, 1, 1])
+[127] blazepalm.classifier1.bias torch.Size([6])
+[128] blazepalm.regressor2.weight torch.Size([36, 128, 1, 1])
+[129] blazepalm.regressor2.bias torch.Size([36])
+[130] blazepalm.regressor1.weight torch.Size([108, 256, 1, 1])
+[131] blazepalm.regressor1.bias torch.Size([108])
+
+{
+  "blazepalm.backbone1.backbone1.0.weight": "conv2d/Kernel",
+  "blazepalm.backbone1.backbone1.0.bias": "conv2d/Bias",
+  "blazepalm.backbone1.backbone1.1.weight": "p_re_lu/Alpha",
+  "blazepalm.backbone1.backbone1.2.convs.0.weight": "depthwise_conv2d/Kernel",
+  "blazepalm.backbone1.backbone1.2.convs.0.bias": "depthwise_conv2d/Bias",
+  "blazepalm.backbone1.backbone1.2.convs.1.weight": "conv2d_1/Kernel",
+  "blazepalm.backbone1.backbone1.2.convs.1.bias": "conv2d_1/Bias",
+  "blazepalm.backbone1.backbone1.3.weight": "p_re_lu_1/Alpha",
+  "blazepalm.backbone1.backbone1.4.convs.0.weight": "depthwise_conv2d_1/Kernel",
+  "blazepalm.backbone1.backbone1.4.convs.0.bias": "depthwise_conv2d_1/Bias",
+  "blazepalm.backbone1.backbone1.4.convs.1.weight": "conv2d_2/Kernel",
+  "blazepalm.backbone1.backbone1.4.convs.1.bias": "conv2d_2/Bias",
+  "blazepalm.backbone1.backbone1.5.weight": "p_re_lu_2/Alpha",
+  "blazepalm.backbone1.backbone1.6.convs.0.weight": "depthwise_conv2d_2/Kernel",
+  "blazepalm.backbone1.backbone1.6.convs.0.bias": "depthwise_conv2d_2/Bias",
+  "blazepalm.backbone1.backbone1.6.convs.1.weight": "conv2d_3/Kernel",
+  "blazepalm.backbone1.backbone1.6.convs.1.bias": "conv2d_3/Bias",
+  "blazepalm.backbone1.backbone1.7.weight": "p_re_lu_3/Alpha",
+  "blazepalm.backbone1.backbone1.8.convs.0.weight": "depthwise_conv2d_3/Kernel",
+  "blazepalm.backbone1.backbone1.8.convs.0.bias": "depthwise_conv2d_3/Bias",
+  "blazepalm.backbone1.backbone1.8.convs.1.weight": "conv2d_4/Kernel",
+  "blazepalm.backbone1.backbone1.8.convs.1.bias": "conv2d_4/Bias",
+  "blazepalm.backbone1.backbone1.9.weight": "p_re_lu_4/Alpha",
+  "blazepalm.backbone1.backbone1.10.convs.0.weight": "depthwise_conv2d_4/Kernel",
+  "blazepalm.backbone1.backbone1.10.convs.0.bias": "depthwise_conv2d_4/Bias",
+  "blazepalm.backbone1.backbone1.10.convs.1.weight": "conv2d_5/Kernel",
+  "blazepalm.backbone1.backbone1.10.convs.1.bias": "conv2d_5/Bias",
+  "blazepalm.backbone1.backbone1.11.weight": "p_re_lu_5/Alpha",
+  "blazepalm.backbone1.backbone1.12.convs.0.weight": "depthwise_conv2d_5/Kernel",
+  "blazepalm.backbone1.backbone1.12.convs.0.bias": "depthwise_conv2d_5/Bias",
+  "blazepalm.backbone1.backbone1.12.convs.1.weight": "conv2d_6/Kernel",
+  "blazepalm.backbone1.backbone1.12.convs.1.bias": "conv2d_6/Bias",
+  "blazepalm.backbone1.backbone1.13.weight": "p_re_lu_6/Alpha",
+  "blazepalm.backbone1.backbone1.14.convs.0.weight": "depthwise_conv2d_6/Kernel",
+  "blazepalm.backbone1.backbone1.14.convs.0.bias": "depthwise_conv2d_6/Bias",
+  "blazepalm.backbone1.backbone1.14.convs.1.weight": "conv2d_7/Kernel",
+  "blazepalm.backbone1.backbone1.14.convs.1.bias": "conv2d_7/Bias",
+  "blazepalm.backbone1.backbone1.15.weight": "p_re_lu_7/Alpha",
+  "blazepalm.backbone1.backbone1.16.convs.0.weight": "depthwise_conv2d_7/Kernel",
+  "blazepalm.backbone1.backbone1.16.convs.0.bias": "depthwise_conv2d_7/Bias",
+  "blazepalm.backbone1.backbone1.16.convs.1.weight": "conv2d_8/Kernel",
+  "blazepalm.backbone1.backbone1.16.convs.1.bias": "conv2d_8/Bias",
+  "blazepalm.backbone1.backbone1.17.weight": "p_re_lu_8/Alpha",
+  "blazepalm.backbone1.backbone1.18.convs.0.weight": "depthwise_conv2d_8/Kernel",
+  "blazepalm.backbone1.backbone1.18.convs.0.bias": "depthwise_conv2d_8/Bias",
+  "blazepalm.backbone1.backbone1.18.convs.1.weight": "conv2d_9/Kernel",
+  "blazepalm.backbone1.backbone1.18.convs.1.bias": "conv2d_9/Bias",
+  "blazepalm.backbone1.backbone1.19.weight": "p_re_lu_9/Alpha",
+  "blazepalm.backbone1.backbone1.20.convs.0.weight": "depthwise_conv2d_9/Kernel",
+  "blazepalm.backbone1.backbone1.20.convs.0.bias": "depthwise_conv2d_9/Bias",
+  "blazepalm.backbone1.backbone1.20.convs.1.weight": "conv2d_10/Kernel",
+  "blazepalm.backbone1.backbone1.20.convs.1.bias": "conv2d_10/Bias",
+  "blazepalm.backbone1.backbone1.21.weight": "p_re_lu_10/Alpha",
+  "blazepalm.backbone1.backbone1.22.convs.0.weight": "depthwise_conv2d_10/Kernel",
+  "blazepalm.backbone1.backbone1.22.convs.0.bias": "depthwise_conv2d_10/Bias",
+  "blazepalm.backbone1.backbone1.22.convs.1.weight": "conv2d_11/Kernel",
+  "blazepalm.backbone1.backbone1.22.convs.1.bias": "conv2d_11/Bias",
+  "blazepalm.backbone1.backbone1.23.weight": "p_re_lu_11/Alpha",
+  "blazepalm.backbone2.path1.0.convs.0.weight": "depthwise_conv2d_11/Kernel",
+  "blazepalm.backbone2.path1.0.convs.0.bias": "depthwise_conv2d_11/Bias",
+  "blazepalm.backbone2.path1.0.convs.1.weight": "conv2d_12/Kernel",
+  "blazepalm.backbone2.path1.0.convs.1.bias": "conv2d_12/Bias",
+  "blazepalm.backbone2.path1.1.weight": "p_re_lu_12/Alpha",
+  "blazepalm.backbone2.path1.2.convs.0.weight": "depthwise_conv2d_12/Kernel",
+  "blazepalm.backbone2.path1.2.convs.0.bias": "depthwise_conv2d_12/Bias",
+  "blazepalm.backbone2.path1.2.convs.1.weight": "conv2d_13/Kernel",
+  "blazepalm.backbone2.path1.2.convs.1.bias": "conv2d_13/Bias",
+  "blazepalm.backbone2.path1.3.weight": "p_re_lu_13/Alpha",
+  "blazepalm.backbone2.path1.4.convs.0.weight": "depthwise_conv2d_13/Kernel",
+  "blazepalm.backbone2.path1.4.convs.0.bias": "depthwise_conv2d_13/Bias",
+  "blazepalm.backbone2.path1.4.convs.1.weight": "conv2d_14/Kernel",
+  "blazepalm.backbone2.path1.4.convs.1.bias": "conv2d_14/Bias",
+  "blazepalm.backbone2.path1.5.weight": "p_re_lu_14/Alpha",
+  "blazepalm.backbone2.path1.6.convs.0.weight": "depthwise_conv2d_14/Kernel",
+  "blazepalm.backbone2.path1.6.convs.0.bias": "depthwise_conv2d_14/Bias",
+  "blazepalm.backbone2.path1.6.convs.1.weight": "conv2d_15/Kernel",
+  "blazepalm.backbone2.path1.6.convs.1.bias": "conv2d_15/Bias",
+  "blazepalm.backbone2.path1.7.weight": "p_re_lu_15/Alpha",
+  "blazepalm.backbone2.path2.0.convs.0.weight": "depthwise_conv2d_15/Kernel",
+  "blazepalm.backbone2.path2.0.convs.0.bias": "depthwise_conv2d_15/Bias",
+  "blazepalm.backbone2.path2.0.convs.1.weight": "conv2d_16/Kernel",
+  "blazepalm.backbone2.path2.0.convs.1.bias": "conv2d_16/Bias",
+  "blazepalm.backbone2.path2.1.weight": "p_re_lu_16/Alpha",
+  "blazepalm.backbone2.path2.2.convs.0.weight": "depthwise_conv2d_16/Kernel",
+  "blazepalm.backbone2.path2.2.convs.0.bias": "depthwise_conv2d_16/Bias",
+  "blazepalm.backbone2.path2.2.convs.1.weight": "conv2d_17/Kernel",
+  "blazepalm.backbone2.path2.2.convs.1.bias": "conv2d_17/Bias",
+  "blazepalm.backbone2.path2.3.weight": "p_re_lu_17/Alpha",
+  "blazepalm.backbone2.path2.4.convs.0.weight": "depthwise_conv2d_17/Kernel",
+  "blazepalm.backbone2.path2.4.convs.0.bias": "depthwise_conv2d_17/Bias",
+  "blazepalm.backbone2.path2.4.convs.1.weight": "conv2d_18/Kernel",
+  "blazepalm.backbone2.path2.4.convs.1.bias": "conv2d_18/Bias",
+  "blazepalm.backbone2.path2.5.weight": "p_re_lu_18/Alpha",
+  "blazepalm.backbone2.path2.6.convs.0.weight": "depthwise_conv2d_18/Kernel",
+  "blazepalm.backbone2.path2.6.convs.0.bias": "depthwise_conv2d_18/Bias",
+  "blazepalm.backbone2.path2.6.convs.1.weight": "conv2d_19/Kernel",
+  "blazepalm.backbone2.path2.6.convs.1.bias": "conv2d_19/Bias",
+  "blazepalm.backbone2.path2.7.weight": "p_re_lu_19/Alpha",
+  "blazepalm.backbone2.path2.9.weight": "conv2d_20/Kernel",
+  "blazepalm.backbone2.path2.9.bias": "conv2d_20/Bias",
+  "blazepalm.backbone2.path2.10.weight": "p_re_lu_20/Alpha",
+  "blazepalm.backbone2.path3.0.convs.0.weight": "depthwise_conv2d_19/Kernel",
+  "blazepalm.backbone2.path3.0.convs.0.bias": "depthwise_conv2d_19/Bias",
+  "blazepalm.backbone2.path3.0.convs.1.weight": "conv2d_21/Kernel",
+  "blazepalm.backbone2.path3.0.convs.1.bias": "conv2d_21/Bias",
+  "blazepalm.backbone2.path3.1.weight": "p_re_lu_21/Alpha",
+  "blazepalm.backbone2.path3.2.convs.0.weight": "depthwise_conv2d_20/Kernel",
+  "blazepalm.backbone2.path3.2.convs.0.bias": "depthwise_conv2d_20/Bias",
+  "blazepalm.backbone2.path3.2.convs.1.weight": "conv2d_22/Kernel",
+  "blazepalm.backbone2.path3.2.convs.1.bias": "conv2d_22/Bias",
+  "blazepalm.backbone2.path3.3.weight": "p_re_lu_22/Alpha",
+  "blazepalm.backbone2.path4.1.weight": "conv2d_23/Kernel",
+  "blazepalm.backbone2.path4.1.bias": "conv2d_23/Bias",
+  "blazepalm.backbone2.path4.2.weight": "p_re_lu_23/Alpha",
+  "blazepalm.backbone2.path5.0.convs.0.weight": "depthwise_conv2d_21/Kernel",
+  "blazepalm.backbone2.path5.0.convs.0.bias": "depthwise_conv2d_21/Bias",
+  "blazepalm.backbone2.path5.0.convs.1.weight": "conv2d_24/Kernel",
+  "blazepalm.backbone2.path5.0.convs.1.bias": "conv2d_24/Bias",
+  "blazepalm.backbone2.path5.1.weight": "p_re_lu_24/Alpha",
+  "blazepalm.backbone2.path5.2.convs.0.weight": "depthwise_conv2d_22/Kernel",
+  "blazepalm.backbone2.path5.2.convs.0.bias": "depthwise_conv2d_22/Bias",
+  "blazepalm.backbone2.path5.2.convs.1.weight": "conv2d_25/Kernel",
+  "blazepalm.backbone2.path5.2.convs.1.bias": "conv2d_25/Bias",
+  "blazepalm.backbone2.path5.3.weight": "p_re_lu_25/Alpha",
+  "blazepalm.classifier2.weight": "classificator_8/Kernel",
+  "blazepalm.classifier2.bias": "classificator_8/Bias",
+  "blazepalm.classifier1.weight": "classificator_16/Kernel",
+  "blazepalm.classifier1.bias": "classificator_16/Bias",
+  "blazepalm.regressor2.weight": "regressor_8/Kernel",
+  "blazepalm.regressor2.bias": "regressor_8/Bias",
+  "blazepalm.regressor1.weight": "regressor_16/Kernel",
+  "blazepalm.regressor1.bias": "regressor_16/Bias"
+}
