@@ -143,7 +143,7 @@ class BlazeFaceFR(nn.Module):
     NUM_PER_KEYPOINT = 2
     NUM_PER_BOX = 4
 
-    def __init__(self):
+    def __init__(self, image_scale=1):
         super().__init__()
         self.backbone1 = BackBone1()
         self.backbone2 = BackBone2()
@@ -151,6 +151,7 @@ class BlazeFaceFR(nn.Module):
         self.backbone4 = BackBone4()
         self.classifier1 = nn.Conv2d(48, 1, 1)
         self.regressor1 = nn.Conv2d(48, 16, 1)
+        self.scale = image_scale ** 2
 
     def forward(self, image):
         b1 = self.backbone1(image)
@@ -161,7 +162,7 @@ class BlazeFaceFR(nn.Module):
         r1 = self.regressor1(b4)
 
         regression_channels = self.NUM_PER_BOX + self.KEY_POINTS_NUMBER * self.NUM_PER_KEYPOINT
-        c1 = c1.permute(0, 2, 3, 1).reshape(-1, 2304, 1)
-        r1 = r1.permute(0, 2, 3, 1).reshape(-1, 2304, regression_channels)
+        c1 = c1.permute(0, 2, 3, 1).reshape(-1, int(2304 * self.scale), 1)
+        r1 = r1.permute(0, 2, 3, 1).reshape(-1, int(2304 * self.scale), regression_channels)
 
         return c1, r1

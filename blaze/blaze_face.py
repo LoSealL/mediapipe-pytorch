@@ -70,7 +70,7 @@ class BlazeFace(nn.Module):
     NUM_PER_KEYPOINT = 2
     NUM_PER_BOX = 4
 
-    def __init__(self):
+    def __init__(self, image_scale=1):
         super(BlazeFace, self).__init__()
         self.backbone1 = BackBone1()
         self.backbone2 = BackBone2()
@@ -78,6 +78,7 @@ class BlazeFace(nn.Module):
         self.classifier2 = nn.Conv2d(96, 6, 1)
         self.regressor1 = nn.Conv2d(88, 32, 1)
         self.regressor2 = nn.Conv2d(96, 96, 1)
+        self.scale = image_scale ** 2
 
     def forward(self, image):
         b1 = self.backbone1(image)
@@ -88,10 +89,11 @@ class BlazeFace(nn.Module):
         r2 = self.regressor2(b2)
 
         regression_channels = self.NUM_PER_BOX + self.KEY_POINTS_NUMBER * self.NUM_PER_KEYPOINT
-        c1 = c1.permute(0, 2, 3, 1).reshape(-1, 512, 1)
-        c2 = c2.permute(0, 2, 3, 1).reshape(-1, 384, 1)
-        r1 = r1.permute(0, 2, 3, 1).reshape(-1, 512, regression_channels)
-        r2 = r2.permute(0, 2, 3, 1).reshape(-1, 384, regression_channels)
+        num_anchors = [int(512 * self.scale), int(384 * self.scale)]
+        c1 = c1.permute(0, 2, 3, 1).reshape(-1, num_anchors[0], 1)
+        c2 = c2.permute(0, 2, 3, 1).reshape(-1, num_anchors[1], 1)
+        r1 = r1.permute(0, 2, 3, 1).reshape(-1, num_anchors[0], regression_channels)
+        r2 = r2.permute(0, 2, 3, 1).reshape(-1, num_anchors[1], regression_channels)
 
         c = torch.cat((c1, c2), dim=1)
         r = torch.cat((r1, r2), dim=1)

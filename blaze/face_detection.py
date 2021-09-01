@@ -48,13 +48,19 @@ class FaceDetection(nn.Module):
     W_SCALE = 128.0
     H_SCALE = 128.0
 
-    def __init__(self):
+    def __init__(self, image_scale=1):
         super(FaceDetection, self).__init__()
-        anchors = generate_anchors(SSD_ANCHOR_OPTIONS)
+        option = SSD_ANCHOR_OPTIONS.copy()
+        option['input_size_height'] = int(option['input_size_height'] * image_scale)
+        option['input_size_width'] = int(option['input_size_width'] * image_scale)
+        anchors = generate_anchors(option)
         anchors = torch.tensor(anchors, requires_grad=False)
-        self.blazeface = BlazeFace()
-        self.decode = BlazeDecodeBox(self.NUM_CLASSES, self.NUM_BOXES, self.NUM_COORDS, self.X_SCALE, self.Y_SCALE,
-                                     self.W_SCALE, self.H_SCALE, anchors)
+        self.blazeface = BlazeFace(image_scale=image_scale)
+        self.decode = BlazeDecodeBox(
+            self.NUM_CLASSES, int(self.NUM_BOXES * image_scale**2), self.NUM_COORDS,
+            self.X_SCALE * image_scale, self.Y_SCALE * image_scale,
+            self.W_SCALE * image_scale, self.H_SCALE * image_scale,
+            anchors)
 
     def forward(self, image: torch.Tensor):
         # normalize to [-1, 1]
@@ -75,13 +81,19 @@ class FaceDetectionFullRange(nn.Module):
     W_SCALE = 192.0
     H_SCALE = 192.0
 
-    def __init__(self):
+    def __init__(self, image_scale=1):
         super().__init__()
-        anchors = generate_anchors(SSD_ANCHOR_OPTIONS_FR)
+        option = SSD_ANCHOR_OPTIONS_FR.copy()
+        option['input_size_height'] = int(option['input_size_height'] * image_scale)
+        option['input_size_width'] = int(option['input_size_width'] * image_scale)
+        anchors = generate_anchors(option)
         anchors = torch.tensor(anchors, requires_grad=False)
-        self.blazeface = BlazeFaceFR()
-        self.decode = BlazeDecodeBox(self.NUM_CLASSES, self.NUM_BOXES, self.NUM_COORDS, self.X_SCALE, self.Y_SCALE,
-                                     self.W_SCALE, self.H_SCALE, anchors)
+        self.blazeface = BlazeFaceFR(image_scale=image_scale)
+        self.decode = BlazeDecodeBox(
+            self.NUM_CLASSES, int(self.NUM_BOXES * image_scale**2), self.NUM_COORDS,
+            self.X_SCALE * image_scale, self.Y_SCALE * image_scale,
+            self.W_SCALE * image_scale, self.H_SCALE * image_scale,
+            anchors)
 
     def forward(self, image: torch.Tensor):
         # normalize to [-1, 1]
