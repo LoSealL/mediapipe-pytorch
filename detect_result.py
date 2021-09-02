@@ -25,5 +25,5 @@ class DetectResult(torch.nn.Module):
             label = cls.indices[mask].long()
         bbox = box[..., :4]
         bbox = torchvision.ops.box_convert(bbox, 'cxcywh', 'xyxy')
-        idx = torchvision.ops.batched_nms(bbox.float(), score.squeeze(), label.squeeze(), self.nms_threshold)
+        idx = torchvision.ops.batched_nms(bbox.float(), score.squeeze(-1), label.squeeze(-1), self.nms_threshold)
         return score[idx], box[idx]

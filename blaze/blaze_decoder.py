@@ -105,9 +105,12 @@ class BlazeDecodeBox(nn.Module):
         self.anchor_offset = self.anchor_offset[None]
 
     def decode_boxes(self, raw_boxes):
-        r = raw_boxes / self.scale
-        r *= self.anchor_scale
-        r += self.anchor_offset
+        scale = self.scale.to(raw_boxes.device)
+        anchor_scale = self.anchor_scale.to(raw_boxes.device)
+        anchor_offset = self.anchor_offset.to(raw_boxes.device)
+        r = raw_boxes / scale
+        r *= anchor_scale
+        r += anchor_offset
         return r
 
     def forward(self, scores, boxes):
