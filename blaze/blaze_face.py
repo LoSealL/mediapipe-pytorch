@@ -70,7 +70,7 @@ class BlazeFace(nn.Module):
     NUM_PER_KEYPOINT = 2
     NUM_PER_BOX = 4
 
-    def __init__(self, image_scale=1):
+    def __init__(self, image_scale=(1, 1)):
         super(BlazeFace, self).__init__()
         self.backbone1 = BackBone1()
         self.backbone2 = BackBone2()
@@ -78,7 +78,7 @@ class BlazeFace(nn.Module):
         self.classifier2 = nn.Conv2d(96, 6, 1)
         self.regressor1 = nn.Conv2d(88, 32, 1)
         self.regressor2 = nn.Conv2d(96, 96, 1)
-        self.scale = image_scale ** 2
+        self.scale = image_scale[0] * image_scale[1]
 
     def forward(self, image):
         b1 = self.backbone1(image)

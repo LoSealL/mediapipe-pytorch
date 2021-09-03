@@ -48,18 +48,24 @@ class FaceDetection(nn.Module):
     W_SCALE = 128.0
     H_SCALE = 128.0
 
-    def __init__(self, image_scale=1):
+    def __init__(self, image_scale=1, image_size=None):
         super(FaceDetection, self).__init__()
         option = SSD_ANCHOR_OPTIONS.copy()
-        option['input_size_height'] = int(option['input_size_height'] * image_scale)
-        option['input_size_width'] = int(option['input_size_width'] * image_scale)
+        image_scale = [image_scale, image_scale]
+        option['input_size_height'] = int(option['input_size_height'] * image_scale[0])
+        option['input_size_width'] = int(option['input_size_width'] * image_scale[1])
+        if image_size is not None:
+            option['input_size_height'] = image_size[0]
+            option['input_size_width'] = image_size[1]
+            image_scale[0] = image_size[1] / 128
+            image_scale[1] = image_size[0] / 128
         anchors = generate_anchors(option)
         anchors = torch.tensor(anchors, requires_grad=False)
         self.blazeface = BlazeFace(image_scale=image_scale)
         self.decode = BlazeDecodeBox(
-            self.NUM_CLASSES, int(self.NUM_BOXES * image_scale**2), self.NUM_COORDS,
-            self.X_SCALE * image_scale, self.Y_SCALE * image_scale,
-            self.W_SCALE * image_scale, self.H_SCALE * image_scale,
+            self.NUM_CLASSES, int(self.NUM_BOXES * image_scale[0] * image_scale[1]), self.NUM_COORDS,
+            self.X_SCALE * image_scale[1], self.Y_SCALE * image_scale[0],
+            self.W_SCALE * image_scale[1], self.H_SCALE * image_scale[0],
             anchors)
 
     def forward(self, image: torch.Tensor):
@@ -81,18 +87,24 @@ class FaceDetectionFullRange(nn.Module):
     W_SCALE = 192.0
     H_SCALE = 192.0
 
-    def __init__(self, image_scale=1):
+    def __init__(self, image_scale=1, image_size=None):
         super().__init__()
         option = SSD_ANCHOR_OPTIONS_FR.copy()
-        option['input_size_height'] = int(option['input_size_height'] * image_scale)
-        option['input_size_width'] = int(option['input_size_width'] * image_scale)
+        image_scale = [image_scale, image_scale]
+        option['input_size_height'] = int(option['input_size_height'] * image_scale[0])
+        option['input_size_width'] = int(option['input_size_width'] * image_scale[1])
+        if image_size is not None:
+            option['input_size_height'] = image_size[0]
+            option['input_size_width'] = image_size[1]
+            image_scale[0] = image_size[1] / 192
+            image_scale[1] = image_size[0] / 192
         anchors = generate_anchors(option)
         anchors = torch.tensor(anchors, requires_grad=False)
         self.blazeface = BlazeFaceFR(image_scale=image_scale)
         self.decode = BlazeDecodeBox(
-            self.NUM_CLASSES, int(self.NUM_BOXES * image_scale**2), self.NUM_COORDS,
-            self.X_SCALE * image_scale, self.Y_SCALE * image_scale,
-            self.W_SCALE * image_scale, self.H_SCALE * image_scale,
+            self.NUM_CLASSES, int(self.NUM_BOXES * image_scale[0] * image_scale[1]), self.NUM_COORDS,
+            self.X_SCALE * image_scale[1], self.Y_SCALE * image_scale[0],
+            self.W_SCALE * image_scale[1], self.H_SCALE * image_scale[0],
             anchors)
 
     def forward(self, image: torch.Tensor):
