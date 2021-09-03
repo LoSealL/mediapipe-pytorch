@@ -11,6 +11,7 @@ import torch
 from blaze.face_detection import FaceDetection, FaceDetectionFullRange
 from blaze.hand_detection import HandDetection
 from blaze.hand_landmark import HandLandmark
+from others.faceboxes import FaceBoxesDetection
 from ptflop import get_model_complexity_info
 
 fd = FaceDetection()
@@ -38,3 +39,7 @@ hl = HandLandmark()
 macs, params = get_model_complexity_info(
     hl, tuple(HandLandmark.IMAGE_SHAPE), as_strings=False, print_per_layer_stat=False)
 print(f"Hand Landmark: {2 * macs / 2**30:.5f}GMACs")
+
+fb = FaceBoxesDetection(image_size=(320, 320))
+macs, params = get_model_complexity_info(fb, (3, 320, 320), as_strings=False, print_per_layer_stat=False)
+print(f"Face-Boxes: {2 * macs / 2**30:.5f}GMACs")
