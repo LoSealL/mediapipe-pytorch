@@ -63,6 +63,9 @@ for i, frame in enumerate(tqdm.tqdm(vframes)):
     sy, sx = size[0] / h, size[1] / w
     right = int(size[1] / min(sy, sx) - w)
     bottom = int(size[0] / min(sy, sx) - h)
+    if args.model == 'faceboxes':
+        # To BGR
+        frame = torch.flip(frame, dims=[-1])
     frame = frame.permute([2, 0, 1])
     trans = tv.transforms.Compose([
         tv.transforms.Pad([0, 0, right, bottom], fill=0),
@@ -78,6 +81,9 @@ for i, frame in enumerate(tqdm.tqdm(vframes)):
 
     if args.output_dir or args.show:
         img = frame.detach().cpu().numpy().transpose([1, 2, 0])
+        if args.model == 'faceboxes':
+            # to RGB
+            img = img[..., ::-1]
         for box in boxes:
             box, points = box[:4].reshape([2, 2]), box[4:].reshape([-1, 2])
             lt = ((box[0] - box[1] / 2) * [w + right, h + bottom]).astype('int32')

@@ -5,10 +5,6 @@ seafile-ignore.txt
 .pytest_cache/
 __pycache__/
 .idea/
-subway/**/subway.h
-!subway/subway.h
-data/_output
-data/dataset
 
 # Install info.
 *.egg-info/
@@ -23,29 +19,6 @@ dist/
 # Intermediate output files
 build
 _build
-autogen
-**/docs/api
-**/docs/autodoxygen
-*.tmh
-
-# visualize
-[\._]viz
-
-# external update
-/external/*
-!/external/clim
-!/external/vpl
-!/external/wdk
-!/external/*.zip
-
-# Images
-.png
-.jpg
-.jpeg
-.bmp
-.yuv
-.rgb
-.nv12
-.pyc
-.y
-.yuv420p
+export/
+model/
+output/
